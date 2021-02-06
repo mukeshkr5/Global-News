@@ -15,12 +15,18 @@ class MainViewModel @ViewModelInject constructor(
     private val _newsList: MutableLiveData<List<News>> = MutableLiveData()
     val newsList: LiveData<List<News>> = _newsList
 
+    private val _errorObserver: MutableLiveData<Unit> = MutableLiveData()
+    val errorObserver: LiveData<Unit> = _errorObserver
+
     private var resultCount = 0
 
     private var page: Int = 0
 
+    private var inProgress: Boolean = false
+
     fun fetchNewsList(page: Int) {
         viewModelScope.launch(Dispatchers.IO) {
+            inProgress = true
             val response = repository.getNewsList(page)
             if (response.status == Resource.Status.SUCCESS && response.data != null) {
                 val updatedList: ArrayList<News> = arrayListOf()
@@ -29,7 +35,10 @@ class MainViewModel @ViewModelInject constructor(
                 updatedList.addAll(response.data.articles)
                 _newsList.postValue(updatedList)
                 resultCount = response.data.totalResults
+            } else {
+                _errorObserver.postValue(Unit)
             }
+            inProgress = false
         }
     }
 
@@ -41,14 +50,20 @@ class MainViewModel @ViewModelInject constructor(
     }
 
     fun shouldLoadMoreNews(): Boolean {
-        newsList.value?.let {
-            return it.size < resultCount
-        } ?: kotlin.run {
+        if (inProgress.not()) {
+            newsList.value?.let {
+                return it.size < resultCount
+            } ?: kotlin.run {
+                return false
+            }
+        } else {
             return false
         }
     }
 
     fun loadMoreNews() {
-        fetchNewsList(++page)
+        if (!inProgress) {
+            fetchNewsList(++page)
+        }
     }
 }

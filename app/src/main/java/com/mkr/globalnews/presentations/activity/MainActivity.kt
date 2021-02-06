@@ -6,9 +6,9 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.mkr.globalnews.R
 import com.mkr.globalnews.adapter.NewsListAdapter
 import com.mkr.globalnews.adapter.NewsSelectionListener
@@ -25,24 +25,6 @@ class MainActivity : AppCompatActivity(), NewsSelectionListener {
     private lateinit var binding: ActivityMainBinding
 
     private val viewModel: MainViewModel by viewModels()
-
-    private val recyclerViewOnScrollListener: RecyclerView.OnScrollListener =
-        object : RecyclerView.OnScrollListener() {
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                super.onScrollStateChanged(recyclerView, newState)
-            }
-
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-                val layoutManager = recyclerView.layoutManager as LinearLayoutManager
-                val lastVisibleItem = layoutManager.findLastVisibleItemPosition()
-                recyclerView.adapter?.let {
-                    if (lastVisibleItem == (it.itemCount - 1)) {
-                        loadMoreItems()
-                    }
-                }
-            }
-        }
 
     private fun loadMoreItems() {
         if (viewModel.shouldLoadMoreNews()) {
@@ -73,8 +55,22 @@ class MainActivity : AppCompatActivity(), NewsSelectionListener {
                     itemDecoration.setDrawable(it)
                 }
                 addItemDecoration(itemDecoration)
-                addOnScrollListener(recyclerViewOnScrollListener)
             }
+            val layoutManager = popularNewLayout.popularNews.layoutManager as LinearLayoutManager
+            binding.nestedView.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+                if (v.getChildAt(v.childCount - 1) != null) {
+                    if (scrollY >= v.getChildAt(v.childCount - 1).measuredHeight - v.measuredHeight &&
+                        scrollY > oldScrollY
+                    ) {
+                        val visibleItemCount = layoutManager.childCount
+                        val totalItemCount = layoutManager.itemCount
+                        val pastVisiblesItems = layoutManager.findFirstVisibleItemPosition()
+                        if (visibleItemCount + pastVisiblesItems >= totalItemCount) {
+                            loadMoreItems()
+                        }
+                    }
+                }
+            })
         }
     }
 
@@ -96,6 +92,9 @@ class MainActivity : AppCompatActivity(), NewsSelectionListener {
             binding.popularNewLayout.popularNews.apply {
                 adapter = NewsListAdapter(it, this@MainActivity)
             }
+        })
+        viewModel.errorObserver.observe(this, {
+            // Handle Error case
         })
     }
 
