@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Global News</string>
+    <string name="text_global">Global</string>
+    <string name="text_news">News</string>
+    <string name="top_news">Top News</string>
+    <string name="popular_news">Popular News</string>
+    <string name="loading">Loading…</string>
+    <string name="terms_of_use">Terms of Use Privacy Policy Trademarks</string>
+    <string name="bookmark_news">Bookmark News</string>
+    <string name="search">Search</string>
+</resources>

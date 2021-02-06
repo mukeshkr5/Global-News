@@ -1,0 +1,136 @@
+{
+  "status": "ok",
+  "totalResults": 10,
+  "articles": [
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "BBC News",
+    "title": "Biden: 'Erratic' Trump should not get intelligence briefings",
+    "description": "President Biden says Mr Trump should not have classified reports as \"he might slip and say something\".",
+    "url": "http://www.bbc.co.uk/news/world-us-canada-55960368",
+    "urlToImage": "https://ichef.bbci.co.uk/images/ic/400xn/p096727y.jpg",
+    "publishedAt": "2021-02-06T03:37:22.1439003Z",
+    "content": "US President Joe Biden hinted he could deny Mr Trump a courtesy usually afforded to former presidents because of \"the fact that he might slip and say something\"."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "BBC News",
+    "title": "Biden leaves Republicans behind to fast track $1.9tn bill",
+    "description": "The White House brushes off an ex-Biden adviser's warning the package could destabilise the economy.",
+    "url": "http://www.bbc.co.uk/news/world-us-canada-55960364",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/7660/production/_116840303_065545361.jpg",
+    "publishedAt": "2021-02-06T03:07:21.151801Z",
+    "content": "media captionBiden pledges to \"act fast\" on stimulus\r\nUS President Joe Biden is forging ahead with plans to ram through a $1.9tn (£1.4tn) relief bill without Republican support after disappointing jo… [+4452 chars]"
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "BBC News",
+    "title": "UK expelled Chinese journalists 'working as spies'",
+    "description": "The departures came after suspicions their work in the media was cover for intelligence gathering.",
+    "url": "http://www.bbc.co.uk/news/uk-55956245",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1303B/production/_116838877_gettyimages-1285318170.jpg",
+    "publishedAt": "2021-02-06T02:52:26.8478191Z",
+    "content": "By Gordon CoreraBBC News\r\nimage copyrightGetty Images\r\nThree journalists who were allegedly working as spies for China were asked to leave the UK last year. \r\nTheir departure, first reported by the D… [+1512 chars]"
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "BBC News",
+    "title": "Swiss women only got the vote 50 years ago. Why?",
+    "description": "Women in Switzerland were finally granted the right to vote after a referendum in February 1971.",
+    "url": "http://www.bbc.co.uk/news/world-europe-55950920",
+    "urlToImage": "https://ichef.bbci.co.uk/images/ic/400xn/p096617s.jpg",
+    "publishedAt": "2021-02-06T02:52:25.034237Z",
+    "content": "Women in Switzerland are remembering a key moment in history this weekend - the 50th anniversary of finally being granted the right to vote. \r\nSwitzerland lagged far behind its neighbours Italy, Fran… [+162 chars]"
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "BBC News",
+    "title": "ICC rules it has jurisdiction over West Bank and Gaza 'abuses'",
+    "description": "The international court rules it has jurisdiction to investigate alleged crimes in the West Bank and Gaza.",
+    "url": "http://www.bbc.co.uk/news/world-middle-east-55956771",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/13EB9/production/_116839518_f7681759-2fa1-4756-9d65-00b851befeda.jpg",
+    "publishedAt": "2021-02-06T02:52:23.1284612Z",
+    "content": "image captionPalestinians have been calling for the ICC to investigate alleged abuses for years\r\nThe International Criminal Court ruled on Friday that it has jurisdiction over war crimes and atrociti… [+2764 chars]"
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "BBC News",
+    "title": "Myanmar coup: Military leaders block Twitter and Instagram",
+    "description": "Users had flocked to the two sites to protest against Monday's coup after Facebook was blocked.",
+    "url": "http://www.bbc.co.uk/news/world-asia-55960284",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/15440/production/_116840178_burmatelenorepa.jpg",
+    "publishedAt": "2021-02-06T02:52:21.082097Z",
+    "content": "media caption\"We wish them to fall\": Teachers in the city of Yangon have joined protests against Monday's military coup\r\nTwitter and Instagram have become the latest social media sites to be blocked … [+5858 chars]"
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "BBC News",
+    "title": "Intruder at Air Force One base sparks global security review",
+    "description": "A man was able to access the US president's air base and board an aircraft.",
+    "url": "http://www.bbc.co.uk/news/world-us-canada-55958622",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/13365/production/_116839687_index.jpg",
+    "publishedAt": "2021-02-05T23:07:23.5039439Z",
+    "content": "image copyrightGetty Images\r\nimage captionJoint Base Andrews is home to the presidential aircraft, Air Force One\r\nThe US Air Force will conduct a global security review after an intruder entered the … [+1710 chars]"
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "BBC News",
+    "title": "Covid vaccine rollout: When might life in US return to normal?",
+    "description": "January was the deadliest month of the pandemic for the US, but cases are down and vaccinations are up.",
+    "url": "http://www.bbc.co.uk/news/world-us-canada-55952899",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/13C39/production/_116835908_crop_hi065475842.jpg",
+    "publishedAt": "2021-02-05T21:22:22.2386188Z",
+    "content": "By Mike HillsBBC News\r\nimage copyrightGetty Images\r\nIt's been a long winter for the US, with hospitals seeing more coronavirus patients than at any point in the pandemic and the average number of dai… [+4970 chars]"
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "BBC News",
+    "title": "Christopher Plummer, star of The Sound of Music, dies at 91",
+    "description": "The distinguished Canadian actor played Captain Von Trapp in the much-loved 1965 musical.",
+    "url": "http://www.bbc.co.uk/news/entertainment-arts-55954950",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1FF7/production/_116838180_hi065542213.jpg",
+    "publishedAt": "2021-02-05T18:37:22.0032871Z",
+    "content": "image captionChristopher Plummer replaced Kevin Spacey in 2018 film All the Money in the World\r\nChristopher Plummer, the distinguished Canadian actor best known for his role as Captain Von Trapp in T… [+1086 chars]"
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "BBC News",
+    "title": "Russia expels EU diplomats over Navalny protests",
+    "description": "The diplomats from Germany, Sweden and Poland attended protests in support of Putin critic Alexei Navalny.",
+    "url": "http://www.bbc.co.uk/news/world-europe-55954162",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/83B3/production/_115651733_breaking-large-promo-nc.png",
+    "publishedAt": "2021-02-05T14:52:20.0262075Z",
+    "content": "Russia expels diplomats from Germany, Sweden and Poland for attending protests in support of Putin critic Alexei Navalny"
+  }
+]
+}
