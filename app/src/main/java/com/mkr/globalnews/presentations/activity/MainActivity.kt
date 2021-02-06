@@ -56,8 +56,14 @@ class MainActivity : AppCompatActivity(), NewsSelectionListener {
                 }
                 addItemDecoration(itemDecoration)
             }
+            topNewsLayout.bookmarkButton.setOnClickListener {
+                topNewsLayout.bookmarkButton.setImageResource(R.drawable.ic_bookmarked)
+                viewModel.newsList.value?.first()?.let {
+                    BookmarkList.addNewsToBookmark(it)
+                }
+            }
             val layoutManager = popularNewLayout.popularNews.layoutManager as LinearLayoutManager
-            binding.nestedView.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+            binding.nestedView.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, _, scrollY, _, oldScrollY ->
                 if (v.getChildAt(v.childCount - 1) != null) {
                     if (scrollY >= v.getChildAt(v.childCount - 1).measuredHeight - v.measuredHeight &&
                         scrollY > oldScrollY
@@ -85,12 +91,16 @@ class MainActivity : AppCompatActivity(), NewsSelectionListener {
     }
 
     private fun bindViewModel() {
-        viewModel.fetchNewsList(0)
+        viewModel.fetchNewsList(1)
         viewModel.newsList.observe(this, {
             binding.loading.visibility = View.GONE
             binding.bindTopNews(it.first())
             binding.popularNewLayout.popularNews.apply {
-                adapter = NewsListAdapter(it, this@MainActivity)
+                val list = it.toMutableList()
+                if (list.size > 0) {
+                    list.removeAt(0)
+                }
+                adapter = NewsListAdapter(list, this@MainActivity)
             }
         })
         viewModel.errorObserver.observe(this, {

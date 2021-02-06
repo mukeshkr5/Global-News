@@ -2,7 +2,6 @@ package com.mkr.globalnews.presentations.activity
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.EditorInfo

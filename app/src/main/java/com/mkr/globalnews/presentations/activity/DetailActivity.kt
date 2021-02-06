@@ -51,7 +51,7 @@ class DetailActivity : AppCompatActivity(), NewsSelectionListener {
     }
 
     private fun bindViewModel() {
-        viewModel.fetchNewsList(0)
+        viewModel.fetchNewsList(1)
         viewModel.newsList.observe(this, {
             binding.popularNewLayout.popularNews.apply {
                 adapter = NewsListAdapter(it, this@DetailActivity)

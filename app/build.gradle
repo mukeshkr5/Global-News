@@ -20,6 +20,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "API_KEY", "\"${project.property("apiKey")}\""
         buildConfigField "String", "BASE_URL", "\"${project.property("baseUrl")}\""
+        buildConfigField "Boolean", "SHOULD_USE_MOCK_RESPONSE", "false"
     }
 
     buildTypes {

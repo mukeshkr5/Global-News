@@ -39,7 +39,7 @@ class AppModule {
         retrofit.create(NewsRemoteService::class.java)
 
     @Provides
-    fun provideNewsRepository(service: NewsRemoteService): NewsRepository = if (BuildConfig.DEBUG) {
+    fun provideNewsRepository(service: NewsRemoteService): NewsRepository = if (BuildConfig.SHOULD_USE_MOCK_RESPONSE) {
         MockNewsRepository()
     } else {
         NewsRemoteRepository(service)

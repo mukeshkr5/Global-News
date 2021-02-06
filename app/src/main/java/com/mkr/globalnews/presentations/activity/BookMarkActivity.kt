@@ -28,7 +28,6 @@ class BookMarkActivity : AppCompatActivity(), NewsSelectionListener {
     private fun setUpView() {
         with(binding) {
             bookmarkList.apply {
-                adapter = NewsListAdapter(BookmarkList.getBookmarkList(), this@BookMarkActivity)
 
                 val itemDecoration = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
                 ContextCompat.getDrawable(this@BookMarkActivity, R.drawable.divider_line)?.let {
@@ -39,7 +38,16 @@ class BookMarkActivity : AppCompatActivity(), NewsSelectionListener {
             backButton.setOnClickListener {
                 onBackPressed()
             }
+            searchButton.setOnClickListener {
+                val detailIntent = Intent(this@BookMarkActivity, SearchActivity::class.java)
+                startActivity(detailIntent)
+            }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.bookmarkList.adapter = NewsListAdapter(BookmarkList.getBookmarkList(), this@BookMarkActivity)
     }
 
     override fun onNewsSelected(news: News) {

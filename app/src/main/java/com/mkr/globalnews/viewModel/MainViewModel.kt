@@ -20,7 +20,7 @@ class MainViewModel @ViewModelInject constructor(
 
     private var resultCount = 0
 
-    private var page: Int = 0
+    private var page: Int = 1
 
     private var inProgress: Boolean = false
 
